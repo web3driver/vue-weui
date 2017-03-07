@@ -28,7 +28,7 @@ module.exports = {
     'vue/jsx-uses-vars': 2,
     'eol-last': 0,
     'linebreak-style': 0,
-
+    'indent': 0,
     //for dev
     'no-alert': 0,
     'semi': 0,
