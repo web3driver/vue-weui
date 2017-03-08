@@ -208,6 +208,12 @@
             <img src="./images/icon_nav_z-index.png" alt="">
           </div>
         </li>
+        <li>
+          <div class="weui-flex js_item" data-id="layers" @click="$router.push('test')">
+            <p class="weui-flex__item">测试</p>
+            <img src="./images/icon_nav_z-index.png" alt="">
+          </div>
+        </li>
       </ul>
     </div>
     <div class="page__ft">

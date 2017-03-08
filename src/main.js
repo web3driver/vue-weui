@@ -3,8 +3,14 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
+import components from './components';
 
 Vue.config.productionTip = false;
+
+Object.keys(components).forEach((key) => {
+  const name = key.replace(/(\w)/, (v) => v.toUpperCase())
+  Vue.component(`yv${name}`, components[key])
+})
 
 /* eslint-disable no-new */
 new Vue({

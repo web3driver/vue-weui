@@ -24,10 +24,10 @@
         </div>
         <div class="page__bd">
             <div class="layers j_layers">
-                <div data-name="popout" class="j_pic j_layer layers__layer layers__layer_popout"><span>Popout</span></div>
-                <div data-name="mask" class="j_pic j_layer layers__layer layers__layer_mask"><span>Mask</span></div>
-                <div data-name="navigation" class="j_pic j_layer layers__layer layers__layer_navigation"><span>Navigation</span></div>
-                <div data-name="content" class="j_pic j_layer layers__layer layers__layer_content"><span>Content</span></div>
+                <div data-name="popout" class="j_layer layers__layer layers__layer_popout" :class="{j_pic:flag,j_transform:!flag}"><span>Popout</span></div>
+                <div data-name="mask" class="j_layer layers__layer layers__layer_mask" :class="{j_pic:flag,j_transform:!flag}"><span>Mask</span></div>
+                <div data-name="navigation" class="j_layer layers__layer layers__layer_navigation" :class="{j_pic:flag,j_transform:!flag}"><span>Navigation</span></div>
+                <div data-name="content" class="j_layer layers__layer layers__layer_content" :class="{j_pic:flag,j_transform:!flag}"><span>Content</span></div>
             </div>
         </div>
         <div class="page__ft">
@@ -41,11 +41,14 @@
         name: 'layers',
         data() {
             return {
+                flag: true,
             };
+        },
+        created() {
+            setTimeout(()=>{
+                this.flag = !this.flag
+            }, 1000);
         },
     };
 
 </script>
-
-<style scoped>
-</style>
