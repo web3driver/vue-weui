@@ -1,11 +1,17 @@
 <template>
     <li>
-      {{ title }}
-      <button v-on:click="$emit('remove')">X</button>
+        {{ title }}
+        <button @click="remove">X</button>
     </li>
 </template>
 <script>
-export default{
-    props: ['title'],
-}
+    export default {
+        props: ['title'],
+        methods: {
+            remove() {
+                this.$emit('remove');
+            }
+        }
+    }
+
 </script>

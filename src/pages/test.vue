@@ -8,19 +8,16 @@
     <ul>
       <li v-for="l in lists">{{l}}</li>
     </ul>
-  <input
-    v-model="newTodoText"
-    v-on:keyup.enter="addNewTodo"
-    placeholder="Add a todo"
-  >
-  <ul>
-    <li
-      is="yvTest"
-      v-for="(todo, index) in todos"
-      v-bind:title="todo"
-      v-on:remove="todos.splice(index, 1)"
-    ></li>
-  </ul>
+    <input v-model="newTodoText" v-on:keyup.enter="addNewTodo" placeholder="Add a todo">
+    <ul>
+      <li is="yvTest" v-for="(todo, index) in todos" v-bind:title="todo" v-on:remove="todos.splice(index, 1)"></li>
+    </ul>
+    <yvActionsheet>
+      <div>hahah</div>
+      <div>hahah</div>
+      <a slot="testp">testp</a>
+    </yvActionsheet>
+    <input v-focus/>
   </div>
 </template>
 <script>
@@ -54,6 +51,13 @@
         return util.formatTime(this.msg);
       },
     },
+    directives: {
+      focus: {
+        inserted(el) {
+          el.focus()
+        }
+      }
+    }
   };
 
 </script>
