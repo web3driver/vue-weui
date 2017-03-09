@@ -10,13 +10,13 @@
     </ul>
     <input v-model="newTodoText" v-on:keyup.enter="addNewTodo" placeholder="Add a todo">
     <ul>
-      <li is="yvTest" v-for="(todo, index) in todos" v-bind:title="todo" v-on:remove="todos.splice(index, 1)"></li>
+      <li is="yv-test" v-for="(todo, index) in todos" v-bind:title="todo" v-on:remove="todos.splice(index, 1)"></li>
     </ul>
-    <yvActionsheet>
+    <yv-actionsheet>
       <div>hahah</div>
       <div>hahah</div>
       <a slot="testp">testp</a>
-    </yvActionsheet>
+    </yv-actionsheet>
     <input v-focus/>
   </div>
 </template>

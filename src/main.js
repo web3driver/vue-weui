@@ -8,8 +8,7 @@ import components from './components';
 Vue.config.productionTip = false;
 
 Object.keys(components).forEach((key) => {
-  const name = key.replace(/(\w)/, (v) => v.toUpperCase())
-  Vue.component(`yv${name}`, components[key])
+  Vue.component(`yv-${key}`, components[key])
 })
 
 /* eslint-disable no-new */
