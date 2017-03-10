@@ -1,10 +1,5 @@
 <template>
-  <div class="page button js_show">
-    <div class="page__hd">
-      <h1 class="page__title">Button</h1>
-      <p class="page__desc">按钮</p>
-    </div>
-    <div class="page__bd page__bd_spacing">
+  <yv-page type="button" title="Button" name="按钮">
       <yv-button type="primary">页面主操作 Normal</yv-button>
       <yv-button type="primary" loading>页面主操作 Loading</yv-button>
       <yv-button type="primary" disabled>页面主操作 Disabled</yv-button>
@@ -24,11 +19,7 @@
         <yv-button type="default" mini>按钮</yv-button>
         <yv-button type="warn" mini>按钮</yv-button>
       </div>
-    </div>
-    <div class="page__ft">
-      <a href="javascript:"><img src="./images/icon_footer_link.png" /></a>
-    </div>
-  </div>
+  </yv-page>
 </template>
 
 <script>
