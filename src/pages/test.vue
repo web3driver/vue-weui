@@ -22,7 +22,7 @@
 </template>
 <script>
   import util from '@/utils';
-
+  
   export default {
     name: 'test',
     data() {

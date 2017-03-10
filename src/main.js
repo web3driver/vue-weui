@@ -4,6 +4,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import components from './components';
+import 'weui/dist/style/weui.min.css';
 
 Vue.config.productionTip = false;
 

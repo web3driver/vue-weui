@@ -5,13 +5,14 @@
 </template>
 
 <script>
+
 export default {
   name: 'app',
 };
 </script>
 
 <style>
-@import '~weui/dist/style/weui.min.css';
+
   body,
   html {
     height: 100%;
