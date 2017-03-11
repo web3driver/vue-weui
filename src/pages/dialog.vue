@@ -1,75 +1,25 @@
 <template>
-  <div class="page js_show dialog">
-    <div class="page__hd">
-      <h1 class="page__title">Dialog</h1>
-      <p class="page__desc">对话框</p>
-    </div>
-    <div class="page__bd page__bd_spacing">
-      <a href="javascript:;" class="weui-btn weui-btn_default" id="showIOSDialog1">iOS Dialog样式一</a>
-      <a href="javascript:;" class="weui-btn weui-btn_default" id="showIOSDialog2">iOS Dialog样式二</a>
-      <a href="javascript:;" class="weui-btn weui-btn_default" id="showAndroidDialog1">Android Dialog样式一</a>
-      <a href="javascript:;" class="weui-btn weui-btn_default" id="showAndroidDialog2">Android Dialog样式二</a>
-    </div>
-    <div class="page__ft">
-      <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
-    </div>
+  <yv-page type="dialog" title="Dialog" name="对话框">
+    <yv-button type="default" @click="displayDialog1">iOS Dialog样式一</yv-button>
+    <yv-button type="default" @click="displayDialog2">iOS Dialog样式二</yv-button>
+    <yv-button type="default" @click="displayDialog3">Android Dialog样式一</yv-button>
+    <yv-button type="default" @click="displayDialog4">Android Dialog样式二</yv-button>
 
-    <div id="dialogs">
-      <!--BEGIN dialog1-->
-      <div class="js_dialog" id="iosDialog1" style="display: none;">
-        <div class="weui-mask"></div>
-        <div class="weui-dialog">
-          <div class="weui-dialog__hd"><strong class="weui-dialog__title">弹窗标题</strong></div>
-          <div class="weui-dialog__bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
-          <div class="weui-dialog__ft">
-            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default">辅助操作</a>
-            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">主操作</a>
-          </div>
-        </div>
-      </div>
-      <!--END dialog1-->
-      <!--BEGIN dialog2-->
-      <div class="js_dialog" id="iosDialog2" style="display: none;">
-        <div class="weui-mask"></div>
-        <div class="weui-dialog">
-          <div class="weui-dialog__bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
-          <div class="weui-dialog__ft">
-            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
-          </div>
-        </div>
-      </div>
-      <!--END dialog2-->
-      <!--BEGIN dialog3-->
-      <div class="js_dialog" id="androidDialog1" style="display: none;">
-        <div class="weui-mask"></div>
-        <div class="weui-dialog weui-skin_android">
-          <div class="weui-dialog__hd"><strong class="weui-dialog__title">弹窗标题</strong></div>
-          <div class="weui-dialog__bd">
-            弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内
-          </div>
-          <div class="weui-dialog__ft">
-            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default">辅助操作</a>
-            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">主操作</a>
-          </div>
-        </div>
-      </div>
-      <!--END dialog3-->
-      <!--BEGIN dialog4-->
-      <div class="js_dialog" id="androidDialog2" style="display: none;">
-        <div class="weui-mask"></div>
-        <div class="weui-dialog weui-skin_android">
-          <div class="weui-dialog__bd">
-            弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内
-          </div>
-          <div class="weui-dialog__ft">
-            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default">辅助操作</a>
-            <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">主操作</a>
-          </div>
-        </div>
-      </div>
-      <!--END dialog4-->
+    <div slot="mask">
+      <yv-dialog type="ios" title="弹窗标题" confirm="主操作" cancel="辅助操作" :display="display1" @doConfirm="confirm1" @doCancel="cancel1">
+        弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内
+      </yv-dialog>
+      <yv-dialog type="ios" confirm="主操作" :display="display2" @doConfirm="confirm2">
+        弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内
+      </yv-dialog>
+      <yv-dialog type="android" alert title="弹窗标题" confirm="主操作" cancel="辅助操作" :display="display3" @doConfirm="confirm3" @doCancel="cancel3">
+        弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内
+      </yv-dialog>
+      <yv-dialog type="android" toast confirm="主操作" :display="display4" @doConfirm="confirm4">
+        弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内
+      </yv-dialog>
     </div>
-  </div>
+  </yv-page>
 </template>
 
 <script>
@@ -77,11 +27,55 @@
     name: 'dialog',
     data() {
       return {
+        display1: false,
+        display2: false,
+        display3: false,
+        display4: false
       };
     },
+    methods: {
+      displayDialog1() {
+        this.display1 = true
+      },
+      confirm1(){
+        this.display1 = false
+        alert('confirm1')
+      },
+      cancel1(){
+        this.display1 = false
+        alert('cancel1')
+      },
+      displayDialog2() {
+        this.display2 = true
+      },
+      confirm2(){
+        this.display2 = false
+        alert('confirm2')
+      },
+      displayDialog3() {
+        this.display3 = true
+      },
+      confirm3(){
+        this.display3 = false
+        alert('confirm3')
+      },
+      cancel3(){
+        this.display3 = false
+        alert('cancel3')
+      },
+      displayDialog4() {
+        this.display4 = true
+      },
+      confirm4(){
+        this.display4 = false
+        alert('confirm4')
+      },
+    }
   };
 
 </script>
 
 <style scoped>
+
+
 </style>

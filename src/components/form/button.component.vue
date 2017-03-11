@@ -30,8 +30,8 @@
     },
 
     methods: {
-      handleClick(evt) {
-        this.$emit('click', evt);
+      handleClick(e) {
+        this.$emit('click', e);
       }
     }
   };

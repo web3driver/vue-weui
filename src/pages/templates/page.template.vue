@@ -9,6 +9,7 @@
     <div class="page__bd page__bd_spacing">
         <slot></slot>
     </div>
+    <slot name="mask"></slot>
     <div class="page__ft">
       <a href="javascript:"><img src="../images/icon_footer_link.png" /></a>
     </div>
