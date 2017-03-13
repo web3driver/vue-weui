@@ -16,6 +16,7 @@
       </div>
       <div id="sliderValue" class="weui-slider-box__value">50</div>
     </div>
+    <yv-slider></yv-slider>
   </yv-page>
 </template>
 
