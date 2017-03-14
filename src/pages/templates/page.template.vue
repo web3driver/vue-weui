@@ -6,7 +6,11 @@
       <h1 class="page__title">{{title}}</h1>
       <p class="page__desc">{{name}}</p>
     </div>
-    <div class="page__bd page__bd_spacing">
+    <div class="page__bd" 
+      :class="[
+       nospacing ? 'page__bd_spacing' : ''
+      ]"
+    >
         <slot></slot>
     </div>
     <slot name="mask"></slot>
@@ -19,9 +23,13 @@
 <script>
 export default{
     props: {
-        title : String,
-        name : String,
-        type : String
+        title: String,
+        name: String,
+        type: String,
+        nospacing: {
+          Style: String,
+          default: false
+        }
     }
 }
 </script>
