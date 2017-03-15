@@ -15,38 +15,34 @@
       type: {
         type: String,
         required: true,
-        validate: function (value) {
-          return value === 'success' || value === 'loading'
-        }
+        validate(value) {
+          return value === 'success' || value === 'loading';
+        },
       },
       content: String,
       display: {
         type: Boolean,
-        default: false
-      }
+        default: false,
+      },
     },
     computed: {
       iconType() {
         if (this.type === 'success') {
-          return 'weui-icon-success-no-circle'
+          return 'weui-icon-success-no-circle';
         }
         if (this.type === 'loading') {
-          return 'weui-loading'
+          return 'weui-loading';
         }
+        return '';
       },
       textContent() {
-        if (this.content) {
-          return this.content
-        } else {
-          if (this.type === 'success') {
-            return '已完成'
-          } else if (this.type === 'loading') {
-            return '数据加载中'
-          }
-        }
-      }
-    }
-  }
+        if (this.content) return this.content;
+        if (this.type === 'success') return '已完成';
+        if (this.type === 'loading') return '数据加载中';
+        return '';
+      },
+    },
+  };
 
 </script>
 

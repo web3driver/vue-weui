@@ -41,12 +41,13 @@
   export default {
     name: 'article',
     data() {
-      return {
-      };
+      return {};
     },
   };
 
 </script>
 
 <style scoped>
+
+
 </style>

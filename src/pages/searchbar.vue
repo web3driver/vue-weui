@@ -51,14 +51,11 @@
 
 <script>
     export default {
-        name: 'searchbar',
-        data() {
-            return {
-            };
-        },
+      name: 'searchbar',
+      data() {
+        return {
+        };
+      },
     };
 
 </script>
-
-<style scoped>
-</style>

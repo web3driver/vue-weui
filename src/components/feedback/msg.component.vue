@@ -32,24 +32,25 @@
       type: {
         type: String,
         required: true,
-        validator: function (value) {
-          return value === 'success' || value === 'warn'
-        }
-      }
+        validator(value) {
+          return value === 'success' || value === 'warn';
+        },
+      },
     },
     computed: {
       iconType() {
-        return this.type === 'success' || this.type === 'warn' ? 'weui-icon-' + this.type : ''
+        return this.type === 'success' || this.type === 'warn' ? `weui-icon-${this.type}` : '';
       },
       msgTitle() {
         if (this.type === 'success') {
-          return '操作成功'
+          return '操作成功';
         }
         if (this.type === 'warn') {
-          return '操作失败'
+          return '操作失败';
         }
-      }
-    }
-  }
+        return '';
+      },
+    },
+  };
 
 </script>

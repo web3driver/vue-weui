@@ -11,7 +11,7 @@
     data() {
       return {
         value1: 0,
-        value2: 50
+        value2: 50,
       };
     },
   };

@@ -29,28 +29,18 @@
     props: {
       type: {
         type: String,
-        default: ''
+        default: '',
       },
       title: String,
       lists: {
         type: Array || Object,
-        validate: function (value) {
-          if (typeof value === 'object') {
-            if (Array.isArray(value)) {
-              return value.every((v) => {
-                return typeof v === 'object' && v.content
-              })
-            } else {
-              return value.content
-            }
-          }
-          else{
-              return false
-          }
-        }
-      }
-    }
-
-  }
+        validate(value) {
+          if (typeof value !== 'object') return false;
+          if (Array.isArray(value)) return value.every(v => typeof v === 'object' && v.content);
+          return value.content;
+        },
+      },
+    },
+  };
 
 </script>

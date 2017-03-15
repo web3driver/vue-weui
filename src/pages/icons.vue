@@ -61,12 +61,13 @@
   export default {
     name: 'icons',
     data() {
-      return {
-      };
+      return {};
     },
   };
 
 </script>
 
 <style scoped>
+
+
 </style>

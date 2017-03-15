@@ -17,7 +17,7 @@
 </template>
 <script>
   import util from '@/utils';
-  
+
   export default {
     name: 'test',
     data() {
@@ -37,8 +37,8 @@
         return util.formatTime(this.msg);
       },
       addNewTodo() {
-        this.todos.push(this.newTodoText)
-        this.newTodoText = ''
+        this.todos.push(this.newTodoText);
+        this.newTodoText = '';
       },
     },
     computed: {
@@ -49,10 +49,10 @@
     directives: {
       focus: {
         inserted(el) {
-          el.focus()
-        }
-      }
-    }
+          el.focus();
+        },
+      },
+    },
   };
 
 </script>

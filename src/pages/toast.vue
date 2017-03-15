@@ -15,27 +15,23 @@
       return {
         show1: false,
         show2: false,
-        showTime: 1500
+        showTime: 1500,
       };
     },
     methods: {
       showSuccess() {
-        this.show1 = true
+        this.show1 = true;
         setTimeout(() => {
-          this.show1 = false
-        }, this.showTime)
+          this.show1 = false;
+        }, this.showTime);
       },
       showLoading() {
-        this.show2 = true
+        this.show2 = true;
         setTimeout(() => {
-          this.show2 = false
-        }, this.showTime)
-      }
-    }
+          this.show2 = false;
+        }, this.showTime);
+      },
+    },
   };
 
 </script>
-
-<style scoped>
-
-</style>

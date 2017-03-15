@@ -9,4 +9,4 @@ export default {
     const second = d.getMilliseconds();
     return [year, month, day, hour, minute, second].join('-');
   },
-}
+};

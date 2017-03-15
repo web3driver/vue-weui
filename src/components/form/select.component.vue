@@ -11,35 +11,36 @@
 </template>
 
 <script>
-  import List from './list.component'
+  import List from './list.component';
+
   export default {
     components: {
-      List
+      List,
     },
     props: {
       title: String,
       name: {
         type: String,
-        required: true
+        required: true,
       },
       lists: {
         type: Array,
-        validator: function (value) {
-          return Array.isArray(value) && value.length > 0
-        }
-      }
+        validator(value) {
+          return Array.isArray(value) && value.length > 0;
+        },
+      },
     },
     methods: {
-        itemValue(val){
-            if(val.value||val.value===0) return val.value
-            if(val.text) return val.text
-            return val
-        },
-        textValue(val){
-            if(val.text) return val.text
-            return val
-        }
-    }
-  }
+      itemValue(val) {
+        if (val.value || val.value === 0) return val.value;
+        if (val.text) return val.text;
+        return val;
+      },
+      textValue(val) {
+        if (val.text) return val.text;
+        return val;
+      },
+    },
+  };
 
 </script>

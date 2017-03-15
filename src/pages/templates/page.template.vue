@@ -1,17 +1,13 @@
 <template>
-  <div class="page js_show"
-    :class="[type ? type : '']"
-  >
+  <div class="page js_show" :class="[type ? type : '']">
     <div class="page__hd">
       <h1 class="page__title">{{title}}</h1>
       <p class="page__desc">{{name}}</p>
     </div>
-    <div class="page__bd" 
-      :class="[
+    <div class="page__bd" :class="[
        nospacing ? 'page__bd_spacing' : ''
-      ]"
-    >
-        <slot></slot>
+      ]">
+      <slot></slot>
     </div>
     <slot name="mask"></slot>
     <div class="page__ft">
@@ -21,15 +17,16 @@
 </template>
 
 <script>
-export default{
+  export default {
     props: {
-        title: String,
-        name: String,
-        type: String,
-        nospacing: {
-          Style: String,
-          default: false
-        }
-    }
-}
+      title: String,
+      name: String,
+      type: String,
+      nospacing: {
+        Style: String,
+        default: false,
+      },
+    },
+  };
+
 </script>

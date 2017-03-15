@@ -1,11 +1,9 @@
 <template>
   <div class="js_dialog" :style="displayDialog">
     <div class="weui-mask"></div>
-    <div class="weui-dialog"
-      :class="[
+    <div class="weui-dialog" :class="[
         type==='android' ? 'weui-skin_android' : ''
-      ]"
-    >
+      ]">
       <div class="weui-dialog__hd" v-if="title"><strong class="weui-dialog__title">{{title}}</strong></div>
       <div class="weui-dialog__bd">
         <slot></slot>
@@ -23,39 +21,39 @@
       type: {
         type: String,
         required: true,
-        validator: function (value) {
-          return value === 'ios' || value === 'android'
-        }
+        validator(value) {
+          return value === 'ios' || value === 'android';
+        },
       },
       display: {
         type: Boolean,
-        default: false
+        default: false,
       },
       title: String,
       content: String,
       confirm: {
         type: String,
-        default: '确认'
+        default: '确认',
       },
       cancel: {
         type: String,
-        default: '取消'
-      }
+        default: '取消',
+      },
     },
     computed: {
-      displayDialog(){
-        if (this.type!=='ios'&&this.type!=='android') return ''
-        return !this.display ? 'display:none':''
-      }
+      displayDialog() {
+        if (this.type !== 'ios' && this.type !== 'android') return '';
+        return !this.display ? 'display:none' : '';
+      },
     },
     methods: {
-      doConfirm(){
+      doConfirm() {
         this.$emit('doConfirm');
       },
-      doCancel(){
+      doCancel() {
         this.$emit('doCancel');
-      }
-    }
-  }
+      },
+    },
+  };
 
 </script>

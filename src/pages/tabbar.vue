@@ -38,12 +38,13 @@
   export default {
     name: 'tabbar',
     data() {
-      return {
-      };
+      return {};
     },
   };
 
 </script>
 
 <style scoped>
+
+
 </style>

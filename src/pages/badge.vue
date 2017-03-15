@@ -61,12 +61,13 @@
   export default {
     name: 'badge',
     data() {
-      return {
-      };
+      return {};
     },
   };
 
 </script>
 
 <style scoped>
+
+
 </style>

@@ -103,14 +103,11 @@
 
 <script>
     export default {
-        name: 'panel',
-        data() {
-            return {
-            };
-        },
+      name: 'panel',
+      data() {
+        return {
+        };
+      },
     };
 
 </script>
-
-<style scoped>
-</style>

@@ -15,12 +15,8 @@
   export default {
     name: 'picker',
     data() {
-      return {
-      };
+      return {};
     },
   };
 
 </script>
-
-<style scoped>
-</style>

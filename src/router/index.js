@@ -43,120 +43,120 @@ Vue.use(Router);
 
 export default new Router({
   routes: [{
-      path: '/',
-      component: index,
-    },
-    {
-      path: '/button',
-      component: button,
-    },
-    {
-      path: '/input',
-      component: input,
-    },
-    {
-      path: '/list',
-      component: list,
-    },
-    {
-      path: '/slider',
-      component: slider,
-    },
-    {
-      path: '/uploader',
-      component: uploader,
-    },
-    {
-      path: '/article',
-      component: article,
-    },
-    {
-      path: '/badge',
-      component: badge,
-    },
-    {
-      path: '/flex',
-      component: flex,
-    },
-    {
-      path: '/footer',
-      component: footer,
-    },
-    {
-      path: '/gallery',
-      component: gallery,
-    },
-    {
-      path: '/grid',
-      component: grid,
-    },
-    {
-      path: '/icons',
-      component: icons,
-    },
-    {
-      path: '/loadmore',
-      component: loadmore,
-    },
-    {
-      path: '/panel',
-      component: panel,
-    },
-    {
-      path: '/preview',
-      component: preview,
-    },
-    {
-      path: '/progress',
-      component: progress,
-    },
-    {
-      path: '/actionsheet',
-      component: actionsheet,
-    },
-    {
-      path: '/dialog',
-      component: dialog,
-    },
-    {
-      path: '/msg',
-      component: msg,
-    },
-    {
-      path: '/msgsuccess',
-      component: msgsuccess,
-    },
-    {
-      path: '/msgwarn',
-      component: msgwarn,
-    },
-    {
-      path: '/picker',
-      component: picker,
-    },
-    {
-      path: '/toast',
-      component: toast,
-    },
-    {
-      path: '/searchbar',
-      component: searchbar,
-    },
-    {
-      path: '/navbar',
-      component: navbar,
-    },
-    {
-      path: '/tabbar',
-      component: tabbar,
-    },
-    {
-      path: '/layers',
-      component: layers,
-    },
-    {
-      path: '/test',
-      component: test,
-    },
+    path: '/',
+    component: index,
+  },
+  {
+    path: '/button',
+    component: button,
+  },
+  {
+    path: '/input',
+    component: input,
+  },
+  {
+    path: '/list',
+    component: list,
+  },
+  {
+    path: '/slider',
+    component: slider,
+  },
+  {
+    path: '/uploader',
+    component: uploader,
+  },
+  {
+    path: '/article',
+    component: article,
+  },
+  {
+    path: '/badge',
+    component: badge,
+  },
+  {
+    path: '/flex',
+    component: flex,
+  },
+  {
+    path: '/footer',
+    component: footer,
+  },
+  {
+    path: '/gallery',
+    component: gallery,
+  },
+  {
+    path: '/grid',
+    component: grid,
+  },
+  {
+    path: '/icons',
+    component: icons,
+  },
+  {
+    path: '/loadmore',
+    component: loadmore,
+  },
+  {
+    path: '/panel',
+    component: panel,
+  },
+  {
+    path: '/preview',
+    component: preview,
+  },
+  {
+    path: '/progress',
+    component: progress,
+  },
+  {
+    path: '/actionsheet',
+    component: actionsheet,
+  },
+  {
+    path: '/dialog',
+    component: dialog,
+  },
+  {
+    path: '/msg',
+    component: msg,
+  },
+  {
+    path: '/msgsuccess',
+    component: msgsuccess,
+  },
+  {
+    path: '/msgwarn',
+    component: msgwarn,
+  },
+  {
+    path: '/picker',
+    component: picker,
+  },
+  {
+    path: '/toast',
+    component: toast,
+  },
+  {
+    path: '/searchbar',
+    component: searchbar,
+  },
+  {
+    path: '/navbar',
+    component: navbar,
+  },
+  {
+    path: '/tabbar',
+    component: tabbar,
+  },
+  {
+    path: '/layers',
+    component: layers,
+  },
+  {
+    path: '/test',
+    component: test,
+  },
   ],
 });

@@ -30,47 +30,47 @@
         display1: false,
         display2: false,
         display3: false,
-        display4: false
+        display4: false,
       };
     },
     methods: {
       displayDialog1() {
-        this.display1 = true
+        this.display1 = true;
       },
-      confirm1(){
-        this.display1 = false
-        alert('confirm1')
+      confirm1() {
+        this.display1 = false;
+        alert('confirm1');
       },
-      cancel1(){
-        this.display1 = false
-        alert('cancel1')
+      cancel1() {
+        this.display1 = false;
+        alert('cancel1');
       },
       displayDialog2() {
-        this.display2 = true
+        this.display2 = true;
       },
-      confirm2(){
-        this.display2 = false
-        alert('confirm2')
+      confirm2() {
+        this.display2 = false;
+        alert('confirm2');
       },
       displayDialog3() {
-        this.display3 = true
+        this.display3 = true;
       },
-      confirm3(){
-        this.display3 = false
-        alert('confirm3')
+      confirm3() {
+        this.display3 = false;
+        alert('confirm3');
       },
-      cancel3(){
-        this.display3 = false
-        alert('cancel3')
+      cancel3() {
+        this.display3 = false;
+        alert('cancel3');
       },
       displayDialog4() {
-        this.display4 = true
+        this.display4 = true;
       },
-      confirm4(){
-        this.display4 = false
-        alert('confirm4')
+      confirm4() {
+        this.display4 = false;
+        alert('confirm4');
       },
-    }
+    },
   };
 
 </script>

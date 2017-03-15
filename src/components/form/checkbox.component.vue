@@ -12,24 +12,25 @@
   </list>
 </template>
 <script>
-  import List from './list.component'
+  import List from './list.component';
+
   export default {
     components: {
-      List
+      List,
     },
     props: {
       title: String,
       name: {
         type: String,
-        required: true
+        required: true,
       },
       lists: {
         type: Array,
-        validator: function (value) {
-          return Array.isArray(value) && value.length > 0
-        }
-      }
+        validator(value) {
+          return Array.isArray(value) && value.length > 0;
+        },
+      },
     },
-  }
+  };
 
 </script>

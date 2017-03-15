@@ -67,7 +67,7 @@
 
     <yv-select title="选择" name="select1" :lists="lists4"></yv-select>
     <yv-select name="select2" :lists="lists5"></yv-select>
-    
+
     <div class="weui-cells__title">选择</div>
     <div class="weui-cells">
       <div class="weui-cell weui-cell_select weui-cell_select-before">
@@ -131,14 +131,14 @@
       return {
         lists1: [
           'cell standard',
-          'cell standard'
+          'cell standard',
         ],
         lists2: [
           'standard is dealt for u.',
-          'standard is dealicient for u.'
+          'standard is dealicient for u.',
         ],
         lists3: [
-          '标题文字'
+          '标题文字',
         ],
         lists4: [
           '微信号1',
@@ -147,28 +147,27 @@
           '微信号4',
           '微信号5',
         ],
-        lists5: [
-          {
-            value:0,
-            text:'微信号1'
-          },
-          {
-            value:1,
-            text:'微信号2'
-          },
-          {
-            value:2,
-            text:'微信号3'
-          },
-          {
-            value:3,
-            text:'微信号4'
-          },
-          {
-            value:4,
-            text:'微信号5'
-          },
-        ]
+        lists5: [{
+          value: 0,
+          text: '微信号1',
+        },
+        {
+          value: 1,
+          text: '微信号2',
+        },
+        {
+          value: 2,
+          text: '微信号3',
+        },
+        {
+          value: 3,
+          text: '微信号4',
+        },
+        {
+          value: 4,
+          text: '微信号5',
+        },
+        ],
       };
     },
   };

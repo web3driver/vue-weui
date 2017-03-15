@@ -1,7 +1,5 @@
 <template>
-  <a href="javascript:;" class="weui-btn"
-    @click="handleClick"
-    :class="[
+  <a href="javascript:;" class="weui-btn" @click="handleClick" :class="[
         type&&!plain ? 'weui-btn_' + type : '',
         type&&plain ? 'weui-btn_plain-' + type : '',
         disabled&&!plain ? 'weui-btn_disabled' : '',
@@ -10,8 +8,7 @@
             'weui-btn_loading': loading,
             'weui-btn_mini': mini
         }
-    ]"
-    >
+    ]">
     <i class="weui-loading" v-if="loading"></i>
     <slot></slot>
   </a>
@@ -21,18 +18,18 @@
     props: {
       type: {
         type: String,
-        default: 'default'
+        default: 'default',
       },
       loading: Boolean,
       disabled: Boolean,
       plain: Boolean,
-      mini: Boolean
+      mini: Boolean,
     },
-
     methods: {
       handleClick(e) {
         this.$emit('click', e);
-      }
-    }
+      },
+    },
   };
+
 </script>

@@ -55,12 +55,8 @@
   export default {
     name: 'uploader',
     data() {
-      return {
-      };
+      return {};
     },
   };
 
 </script>
-
-<style scoped>
-</style>

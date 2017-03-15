@@ -13,10 +13,10 @@ import radio from './form/radio.component';
 import checkbox from './form/checkbox.component';
 import textarea from './form/textarea.component';
 import switchbar from './form/switch.component';
-import select from './form/select.component'; 
+import select from './form/select.component';
 import list from './form/list.component';
 import slider from './form/slider.component';
-import uploader from './form/slider.component';
+import uploader from './form/uploader.component';
 // layout
 import article from './layout/article.component';
 import badge from './layout/badge.component';
@@ -31,7 +31,7 @@ import preview from './layout/preview.component';
 import progress from './layout/progress.component';
 // nav
 import nav from './nav/nav.component';
-//search
+// search
 import searchbar from './search/searchbar.component';
 
 export default {

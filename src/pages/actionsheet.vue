@@ -14,29 +14,26 @@
       return {
         isShowIos: false,
         isShowAndroid: false,
-        items: ['示例菜单1','示例菜单2','示例菜单3','示例菜单4']
+        items: ['示例菜单1', '示例菜单2', '示例菜单3', '示例菜单4'],
       };
     },
     methods: {
-      showIos(){
-        this.isShowIos = true
+      showIos() {
+        this.isShowIos = true;
       },
-      displayIos(){
-        this.isShowIos = false
+      displayIos() {
+        this.isShowIos = false;
       },
-      showAndroid(){
-        this.isShowAndroid = true
+      showAndroid() {
+        this.isShowAndroid = true;
       },
-      displayAndroid(){
-        this.isShowAndroid = false
+      displayAndroid() {
+        this.isShowAndroid = false;
       },
-      handleSelect(value){
-        alert(JSON.stringify(value))
-      }
-    }
+      handleSelect(value) {
+        alert(JSON.stringify(value));
+      },
+    },
   };
 
 </script>
-
-<style scoped>
-</style>
