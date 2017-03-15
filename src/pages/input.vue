@@ -1,54 +1,7 @@
 <template>
   <yv-page type="input" title="Input" name="表单输入">
-    <div class="weui-cells__title">单选列表项</div>
-    <div class="weui-cells weui-cells_radio">
-      <label class="weui-cell weui-check__label" for="x11">
-                <div class="weui-cell__bd">
-                    <p>cell standard</p>
-                </div>
-                <div class="weui-cell__ft">
-                    <input type="radio" class="weui-check" name="radio1" id="x11">
-                    <span class="weui-icon-checked"></span>
-                </div>
-            </label>
-      <label class="weui-cell weui-check__label" for="x12">
-
-                <div class="weui-cell__bd">
-                    <p>cell standard</p>
-                </div>
-                <div class="weui-cell__ft">
-                    <input type="radio" name="radio1" class="weui-check" id="x12" checked="checked">
-                    <span class="weui-icon-checked"></span>
-                </div>
-            </label>
-      <a href="javascript:void(0);" class="weui-cell weui-cell_link">
-        <div class="weui-cell__bd">添加更多</div>
-      </a>
-    </div>
-    <div class="weui-cells__title">复选列表项</div>
-    <div class="weui-cells weui-cells_checkbox">
-      <label class="weui-cell weui-check__label" for="s11">
-                <div class="weui-cell__hd">
-                    <input type="checkbox" class="weui-check" name="checkbox1" id="s11" checked="checked">
-                    <i class="weui-icon-checked"></i>
-                </div>
-                <div class="weui-cell__bd">
-                    <p>standard is dealt for u.</p>
-                </div>
-            </label>
-      <label class="weui-cell weui-check__label" for="s12">
-                <div class="weui-cell__hd">
-                    <input type="checkbox" name="checkbox1" class="weui-check" id="s12">
-                    <i class="weui-icon-checked"></i>
-                </div>
-                <div class="weui-cell__bd">
-                    <p>standard is dealicient for u.</p>
-                </div>
-            </label>
-      <a href="javascript:void(0);" class="weui-cell weui-cell_link">
-        <div class="weui-cell__bd">添加更多</div>
-      </a>
-    </div>
+    <yv-radio title="单选列表项" name="radio" :lists="lists1"></yv-radio>
+    <yv-checkbox title="复选列表项" name="checkbox" :lists="lists2"></yv-checkbox>
 
     <div class="weui-cells__title">表单</div>
     <div class="weui-cells weui-cells_form">
@@ -58,7 +11,7 @@
           <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入qq号" />
         </div>
       </div>
-      <div class="weui-cell weui-cell_vcode">
+      <div class="weui-cell weui- ">
         <div class="weui-cell__hd">
           <label class="weui-label">手机号</label>
         </div>
@@ -107,47 +60,16 @@
     </div>
 
 
-    <div class="weui-cells__title">开关</div>
-    <div class="weui-cells weui-cells_form">
-      <div class="weui-cell weui-cell_switch">
-        <div class="weui-cell__bd">标题文字</div>
-        <div class="weui-cell__ft">
-          <input class="weui-switch" type="checkbox" />
-        </div>
-      </div>
-      <div class="weui-cell weui-cell_switch">
-        <div class="weui-cell__bd">兼容IE Edge的版本</div>
-        <div class="weui-cell__ft">
-          <label for="switchCP" class="weui-switch-cp">
-                        <input id="switchCP" class="weui-switch-cp__input" type="checkbox" checked="checked" />
-                        <div class="weui-switch-cp__box"></div>
-                    </label>
-        </div>
-      </div>
-    </div>
 
-    <div class="weui-cells__title">文本框</div>
-    <div class="weui-cells">
-      <div class="weui-cell">
-        <div class="weui-cell__bd">
-          <input class="weui-input" type="text" placeholder="请输入文本" />
-        </div>
-      </div>
-    </div>
+    <yv-switchbar title="开关" name="switch" :lists="lists3"></yv-switchbar>
+    <yv-input title="文本框" placeholder="请输入文本" name="text"></yv-input>
+    <yv-textarea title="文本域" :placeholder="'请输入文本'" name="textarea" :limit="150"></yv-textarea>
 
-    <div class="weui-cells__title">文本域</div>
-    <div class="weui-cells weui-cells_form">
-      <div class="weui-cell">
-        <div class="weui-cell__bd">
-          <textarea class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
-          <div class="weui-textarea-counter"><span>0</span>/200</div>
-        </div>
-      </div>
-    </div>
-
+    <yv-select title="选择" name="select1" :lists="lists4"></yv-select>
+    <yv-select name="select2" :lists="lists5"></yv-select>
+    
     <div class="weui-cells__title">选择</div>
     <div class="weui-cells">
-
       <div class="weui-cell weui-cell_select weui-cell_select-before">
         <div class="weui-cell__hd">
           <select class="weui-select" name="select2">
@@ -206,7 +128,48 @@
   export default {
     name: 'input',
     data() {
-      return {};
+      return {
+        lists1: [
+          'cell standard',
+          'cell standard'
+        ],
+        lists2: [
+          'standard is dealt for u.',
+          'standard is dealicient for u.'
+        ],
+        lists3: [
+          '标题文字'
+        ],
+        lists4: [
+          '微信号1',
+          '微信号2',
+          '微信号3',
+          '微信号4',
+          '微信号5',
+        ],
+        lists5: [
+          {
+            value:0,
+            text:'微信号1'
+          },
+          {
+            value:1,
+            text:'微信号2'
+          },
+          {
+            value:2,
+            text:'微信号3'
+          },
+          {
+            value:3,
+            text:'微信号4'
+          },
+          {
+            value:4,
+            text:'微信号5'
+          },
+        ]
+      };
     },
   };
 

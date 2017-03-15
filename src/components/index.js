@@ -9,6 +9,11 @@ import toast from './feedback/toast.component';
 // form
 import button from './form/button.component';
 import input from './form/input.component';
+import radio from './form/radio.component';
+import checkbox from './form/checkbox.component';
+import textarea from './form/textarea.component';
+import switchbar from './form/switch.component';
+import select from './form/select.component'; 
 import list from './form/list.component';
 import slider from './form/slider.component';
 import uploader from './form/slider.component';
@@ -38,6 +43,11 @@ export default {
   toast,
   button,
   input,
+  radio,
+  checkbox,
+  textarea,
+  switchbar,
+  select,
   list,
   slider,
   uploader,
