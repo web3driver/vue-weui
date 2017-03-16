@@ -1,33 +1,16 @@
 <template>
-  <div class="page js_show loadmore">
-    <div class="page__hd">
-      <h1 class="page__title">Loadmore</h1>
-      <p class="page__desc">加载更多</p>
-    </div>
-    <div class="page__bd">
-      <div class="weui-loadmore">
-        <i class="weui-loading"></i>
-        <span class="weui-loadmore__tips">正在加载</span>
-      </div>
-      <div class="weui-loadmore weui-loadmore_line">
-        <span class="weui-loadmore__tips">暂无数据</span>
-      </div>
-      <div class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
-        <span class="weui-loadmore__tips"></span>
-      </div>
-    </div>
-    <div class="page__ft">
-      <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
-    </div>
-  </div>
+  <yv-page type="loadmore" title="Loadmore" name="加载更多">
+    <yv-loadmore loading>正在加载</yv-loadmore>
+    <yv-loadmore line>暂无数据</yv-loadmore>
+    <yv-loadmore line dot></yv-loadmore>
+  </yv-page>
 </template>
 
 <script>
   export default {
-    name: 'navbar',
+    name: 'loadmore',
     data() {
-      return {
-      };
+      return {};
     },
   };
 

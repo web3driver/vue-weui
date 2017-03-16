@@ -1,52 +1,40 @@
 <template>
-  <div class="page js_show progress">
-    <div class="page__hd">
-      <h1 class="page__title">Progress</h1>
-      <p class="page__desc">进度条</p>
+  <yv-page type="progress" title="Progress" name="进度条">
+    <yv-progress :value="value1" :cancel="cancel"></yv-progress>
+    <br>
+    <yv-progress :value="value2" :cancel="cancel"></yv-progress>
+    <br>
+    <yv-progress :value="value3" :cancel="cancel"></yv-progress>
+    <div class="weui-btn-area">
+      <yv-button type="primary" @click="upload">上传</yv-button>
     </div>
-    <div class="page__bd page__bd_spacing">
-      <div class="weui-progress">
-        <div class="weui-progress__bar">
-          <div class="weui-progress__inner-bar js_progress" style="width: 0%;"></div>
-        </div>
-        <a href="javascript:;" class="weui-progress__opr">
-          <i class="weui-icon-cancel"></i>
-        </a>
-      </div>
-      <br>
-      <div class="weui-progress">
-        <div class="weui-progress__bar">
-          <div class="weui-progress__inner-bar js_progress" style="width: 50%;"></div>
-        </div>
-        <a href="javascript:;" class="weui-progress__opr">
-          <i class="weui-icon-cancel"></i>
-        </a>
-      </div>
-      <br>
-      <div class="weui-progress">
-        <div class="weui-progress__bar">
-          <div class="weui-progress__inner-bar js_progress" style="width: 80%;"></div>
-        </div>
-        <a href="javascript:;" class="weui-progress__opr">
-          <i class="weui-icon-cancel"></i>
-        </a>
-      </div>
-      <div class="weui-btn-area">
-        <a href="javascript:;" class="weui-btn weui-btn_primary" id="btnUpload">上传</a>
-      </div>
-    </div>
-    <div class="page__ft">
-      <a href="javascript:home()"><img src="./images/icon_footer_link.png" /></a>
-    </div>
-  </div>
+  </yv-page>
 </template>
 
 <script>
+  import tween from 'tween.js';
+
   export default {
     name: 'progress',
     data() {
       return {
+        value1: 0,
+        value2: 50,
+        value3: 80,
       };
+    },
+    watch: {
+      value1(newVal, oldVal) {
+        tween.Tween({ tweeningNumber: oldVal })
+          .easing(tween.TWEEN.Easing.Quadratic.Out)
+          .to({ tweeningNumber: newVal }, 500)
+          .start();
+      },
+    },
+    methods: {
+      upload() {
+        this.value1 = 100;
+      },
     },
   };
 

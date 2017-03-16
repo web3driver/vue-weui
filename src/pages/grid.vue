@@ -1,10 +1,6 @@
 <template>
-  <div class="page js_show grid">
-    <div class="page__hd">
-      <h1 class="page__title">Grid</h1>
-      <p class="page__desc">九宫格</p>
-    </div>
-    <div class="weui-grids">
+  <yv-page type="grid" title="Grid" name="九宫格">
+    <yv-grid>
       <a href="javascript:;" class="weui-grid">
         <div class="weui-grid__icon">
           <img src="./images/icon_tabbar.png" alt="">
@@ -53,22 +49,15 @@
         </div>
         <p class="weui-grid__label">Grid</p>
       </a>
-      <a href="javascript:;" class="weui-grid">
-        <div class="weui-grid__icon">
-          <img src="./images/icon_tabbar.png" alt="">
-        </div>
-        <p class="weui-grid__label">Grid</p>
-      </a>
-    </div>
-  </div>
+    </yv-grid>
+  </yv-page>
 </template>
 
 <script>
   export default {
     name: 'grid',
     data() {
-      return {
-      };
+      return {};
     },
   };
 

@@ -26,9 +26,11 @@ module.exports = {
   // add your custom rules here
   'rules': {
     'vue/jsx-uses-vars': 2,
-    
+    'linebreak-style' : 0,
+
     //for dev
     'no-alert': 0,
+    'no-console': 0,
     //for dev end
 
     // don't require .vue extension when importing

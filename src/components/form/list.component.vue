@@ -6,15 +6,22 @@
         <a v-if="item.href" class="weui-cell" :class="item.href ? 'weui-cell_access' : ''" :href="item.href">
           <div class="weui-cell__hd" v-if="item.imgsrc"><img :src="item.imgsrc" alt="" style="width:20px;margin-right:5px;display:block"></div>
           <div class="weui-cell__bd">
-            <p>{{item.content}}
+            <p>
+              {{item.content}}
+              <span v-if="item.badgeleft" class="weui-badge" style="margin-left: 5px;">{{item.badgeText}}</span>
             </p>
           </div>
-          <div class="weui-cell__ft">{{item.description}}</div>
+          <div class="weui-cell__ft">
+            {{item.description}}
+            <span v-if="item.badgeright" class="weui-badge weui-badge_dot" style="margin-left: 5px;margin-right: 5px;"></span>
+          </div>
         </a>
         <div v-else class="weui-cell" :class="item.href ? 'weui-cell_access' : ''">
           <div class="weui-cell__hd" v-if="item.imgsrc"><img :src="item.imgsrc" alt="" style="width:20px;margin-right:5px;display:block"></div>
           <div class="weui-cell__bd">
-            <p>{{item.content}}
+            <p>
+              {{item.content}}
+              <span v-if="item.badgeleft" class="weui-badge" style="margin-left: 5px;">{{item.badgeText}}</span>
             </p>
           </div>
           <div class="weui-cell__ft">{{item.description}}</div>
@@ -27,10 +34,6 @@
 <script>
   export default {
     props: {
-      type: {
-        type: String,
-        default: '',
-      },
       title: String,
       lists: {
         type: Array || Object,

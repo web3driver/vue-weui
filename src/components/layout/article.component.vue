@@ -1,6 +1,9 @@
 <template>
+  <article class="weui-article">
+      <slot></slot>
+  </article>
 </template>
 <script>
-    export default {
-    };
+  export default {};
+
 </script>
