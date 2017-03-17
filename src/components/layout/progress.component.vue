@@ -1,7 +1,7 @@
 <template>
   <div class="weui-progress">
     <div class="weui-progress__bar">
-      <div class="weui-progress__inner-bar js_progress" :style="`width: ${value}%;`"></div>
+      <div class="weui-progress__inner-bar js_progress" :style="`width: ${val}%;`"></div>
     </div>
     <a href="javascript:;" class="weui-progress__opr" @click.prevent="cancel">
       <i class="weui-icon-cancel"></i>
@@ -11,7 +11,7 @@
 <script>
   export default {
     props: {
-      value: {
+      val: {
         type: Number,
         default: 0,
       },

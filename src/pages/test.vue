@@ -13,6 +13,7 @@
       <li is="yv-test" v-for="(todo, index) in todos" v-bind:title="todo" v-on:remove="todos.splice(index, 1)"></li>
     </ul>
     <input v-focus/>
+    <input type="date">
   </div>
 </template>
 <script>

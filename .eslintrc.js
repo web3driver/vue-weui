@@ -26,7 +26,7 @@ module.exports = {
   // add your custom rules here
   'rules': {
     'vue/jsx-uses-vars': 2,
-    'linebreak-style' : 0,
+    'linebreak-style': 0,
 
     //for dev
     'no-alert': 0,
